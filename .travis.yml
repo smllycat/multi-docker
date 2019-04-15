@@ -9,16 +9,16 @@ script:
   - docker run react-test npm test -- --coverage
   
 after_success:
-  - docker build -t multi-client -f ./client
-  - docker build -t multi-nginx -f ./nginx
-  - docker build -t multi-server -f ./server
-  - docker build -t multi-worker -f ./worker
+  - docker build -t timcast/docker-testing:multi-client -f ./client
+  - docker build -t timcast/docker-testing:multi-nginx -f ./nginx
+  - docker build -t timcast/docker-testing:multi-server -f ./server
+  - docker build -t timcast/docker-testing:multi-worker -f ./worker
   # Log in to the docker CLI
   - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD"
   # Take those images and push them to docker hub
-  - docker push multi-client
-  - docker push multi-nginx
-  - docker push multi-server
-  - docker push multi-worker
+  - docker push timcast/docker-testing:multi-client
+  - docker push timcast/docker-testing:multi-nginx
+  - docker push timcast/docker-testing:multi-server
+  - docker push timcast/docker-testing:multi-worker
 
 
