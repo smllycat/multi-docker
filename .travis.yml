@@ -16,9 +16,9 @@ after_success:
   # Log in to the docker CLI
   - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD"
   # Take those images and push them to docker hub
-  - docker push timcast/docker-testing:multi-client
-  - docker push timcast/docker-testing:multi-nginx
-  - docker push timcast/docker-testing:multi-server
-  - docker push timcast/docker-testing:multi-worker
+  - docker push multi-client
+  - docker push multi-nginx
+  - docker push multi-server
+  - docker push multi-worker
 
 
