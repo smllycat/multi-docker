@@ -10,21 +10,21 @@
         },
         {
             "name": "server",
-            "image": "timcast/docker-testing/server",
+            "image": "timcast/docker-testing/multi-server",
             "hostname": "api",
             "essential": false,
             "memory": "128"
         },
         {
             "name": "worker",
-            "image": "timcast/docker-testing/worker",
+            "image": "timcast/docker-testing/multi-worker",
             "hostname": "worker",
             "essential": false,
             "memory": "128"
         },
         {
             "name": "nginx",
-            "image": "timcast/docker-testing/nginx",
+            "image": "timcast/docker-testing/multi-nginx",
             "hostname": "nginx",
             "essential": true,
             "portMappings": [
