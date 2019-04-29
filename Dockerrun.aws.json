@@ -3,28 +3,28 @@
     "containerDefinitions": [
         {
             "name": "client",
-            "image": "timcast/docker-testing/multi-client",
+            "image": "timcast/docker-testing:multi-client",
             "hostname": "client",
             "essential": false,
             "memory": "128"
         },
         {
             "name": "server",
-            "image": "timcast/docker-testing/multi-server",
+            "image": "timcast/docker-testing:multi-server",
             "hostname": "api",
             "essential": false,
             "memory": "128"
         },
         {
             "name": "worker",
-            "image": "timcast/docker-testing/multi-worker",
+            "image": "timcast/docker-testing:multi-worker",
             "hostname": "worker",
             "essential": false,
             "memory": "128"
         },
         {
             "name": "nginx",
-            "image": "timcast/docker-testing/multi-nginx",
+            "image": "timcast/docker-testing:multi-nginx",
             "hostname": "nginx",
             "essential": true,
             "portMappings": [
